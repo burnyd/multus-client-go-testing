@@ -27,6 +27,7 @@ func GetNetattachments(cfg *rest.Config) {
 	}
 	for _, nad := range list.Items {
 		fmt.Printf("network attachment definition %s with config %q\n", nad.Name, nad.Spec.Config)
+		fmt.Printf("Using vlan %q\n", nad.Labels["vlan"])
 	}
 }
 
